@@ -8,7 +8,6 @@ function Dashboard() {
   return (
     <Layout page="Dashboard">
       <div className="flex h-full">
-        {/* create account and other actions */}
         <div className="flex w-full justify-end space-x-2 p-4">
           <Button
             className="cpbutton"
