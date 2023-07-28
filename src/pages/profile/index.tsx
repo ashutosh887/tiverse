@@ -1,7 +1,7 @@
 import { Image, Space, Tag } from "antd";
 import { useSession } from "next-auth/react";
 import Layout from "~/components/common/Layout";
-import { eventMock, userMock } from "~/config/data";
+import { userMock } from "~/config/data";
 
 function Profile() {
   const { data: sessionData } = useSession();
