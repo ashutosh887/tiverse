@@ -1,5 +1,5 @@
-import { Tooltip } from "antd";
-import { appName } from "~/config/data";
+import { Tag, Tooltip } from "antd";
+import { appName, appVersion } from "~/config/data";
 import { CgFeed, CgProfile } from "react-icons/cg";
 import { FiSettings } from "react-icons/fi";
 import { MdOutlineEventAvailable } from "react-icons/md";
@@ -63,20 +63,21 @@ function SideNav() {
 
   return (
     <div className="flex h-screen w-[20vw] flex-col border-r border-gray-800">
-      <div className="flex h-[8vh] items-center justify-center">
+      <div className="flex justify-center items-center h-[8vh] border border-white">
         <button
           type="button"
-          className="flex h-full w-full items-center px-4"
+          className="flex px-4 items-center h-full w-full"
           onClick={() => void router.push("/dashboard")}
         >
           <Image
-            src="/logo.png"
+            src="/main.png"
             alt="sbg"
-            width={40}
-            height={40}
+            width={45}
+            height={45}
             className="object-contain"
           />
-          <span className="text-2xl font-semibold">{appName}</span>
+          <span className="text-2xl ml-2 font-semibold">{appName}</span>
+          <Tag color="green" className="ml-2">{appVersion}</Tag>
         </button>
       </div>
 
