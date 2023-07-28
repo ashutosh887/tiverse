@@ -64,7 +64,7 @@ function SideNav() {
 
   return (
     <div className="flex h-screen w-[20vw] flex-col border-r border-gray-800">
-      <div className="flex justify-center items-center h-[8vh] border border-white">
+      <div className="flex justify-center items-center h-[8vh]">
         <button
           type="button"
           className="flex px-4 items-center h-full w-full"
@@ -78,7 +78,7 @@ function SideNav() {
             className="object-contain"
           />
           <span className="text-2xl ml-2 font-semibold">{appName}</span>
-          <span className="ml-1 self-end px-1 py-1/2 m-2 flex items-end text-xs rounded-xl">{appVersion}</span>
+          <span className="ml-1 self-end px-1 py-1/2 m-2 flex items-end text-xs rounded-xl font-semibold">{appVersion}</span>
         </button>
       </div>
 
