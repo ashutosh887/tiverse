@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { AiOutlineCalendar } from "react-icons/ai";
 
 const sections = [
   {
@@ -34,11 +35,11 @@ const sections = [
         logo: <TfiWrite />,
         route: "/blogs",
       },
-      // {
-      //   name: 'Docs',
-      //   logo: <RiFilePaper2Line size={20} />,
-      //   route: routes.DOCS,
-      // },
+      {
+        name: 'Calendar',
+        logo: <AiOutlineCalendar />,
+        route: '/calendar',
+      },
     ],
   },
   {
@@ -77,7 +78,7 @@ function SideNav() {
             className="object-contain"
           />
           <span className="text-2xl ml-2 font-semibold">{appName}</span>
-          <Tag color="green" className="ml-2">{appVersion}</Tag>
+          <span className="ml-1 self-end px-1 py-1/2 m-2 flex items-end text-xs rounded-xl">{appVersion}</span>
         </button>
       </div>
 

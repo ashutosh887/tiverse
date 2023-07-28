@@ -1,6 +1,6 @@
 export const appName = "TiVerse";
 export const appDescription = "Unlock the Power of Engagement in your events";
-export const appVersion = "1.0.0";
+export const appVersion = "v1.0.0";
 
 export const serviceName = "TiDB";
 
