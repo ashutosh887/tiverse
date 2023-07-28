@@ -1,6 +1,6 @@
-import { Button, Tooltip } from "antd";
+import { Button } from "antd";
 import { appName } from "~/config/data";
-import { AiOutlineArrowRight, AiOutlineGithub } from "react-icons/ai";
+import { AiOutlineGithub } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -26,10 +26,17 @@ function HomeNav() {
         </Link>
 
         <section className="z-10 flex items-center text-lg text-white">
-          <Button className="cpbutton !container" onClick={() => void signIn()}>
-            <AiOutlineGithub className="mr-2" size={24} />
-            Signin
-          </Button>
+          {sessionData?.user ? (
+            <Button className="cpbutton !container" onClick={() => void signOut()}>
+              <AiOutlineGithub className="mr-2" size={24} />
+              LogOut
+            </Button>
+          ) : (
+            <Button className="cpbutton !container" onClick={() => void signIn()}>
+              <AiOutlineGithub className="mr-2" size={24} />
+              LogIn
+            </Button>
+          )}
         </section>
       </div>
     </nav>

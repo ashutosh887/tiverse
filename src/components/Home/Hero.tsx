@@ -25,15 +25,22 @@ function Hero() {
       </p>
 
       {sessionData?.user.name && (
-        <Button
-          type="primary"
-          size="large"
-          className="cpbutton container mt-8 w-max"
-          onClick={() => void router.push("/dashboard")}
-        >
-          Go to app
-          <AiOutlineArrowRight />
-        </Button>
+        <div className="mt-8 flex flex-col items-center">
+          <span className="m-2 text-sm text-white">
+            Welcome, {sessionData.user.name}!
+          </span>
+
+          <Button
+            type="primary"
+            size="large"
+            className="cpbutton container w-max"
+            onClick={() => void router.push("/dashboard")}
+          >
+            Go to Dashboard
+            <AiOutlineArrowRight />
+          </Button>
+
+        </div>
       )}
 
       <div className="z-10 mt-12">
