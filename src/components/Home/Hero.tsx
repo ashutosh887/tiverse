@@ -5,10 +5,18 @@ import { useRouter } from "next/router";
 import { heroSecondary, serviceName } from "~/config/data";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
+import { useEffect } from "react";
 
 function Hero() {
   const router = useRouter();
   const { data: sessionData } = useSession();
+
+  useEffect(() => {
+    if (sessionData?.user) {
+      void router.push("/dashboard");
+    }
+  }, [sessionData, router]);
+
 
   return (
     <div className="flex h-[85vh] w-[70%] flex-col items-center justify-center sm:w-[70%] md:w-[60%]">
