@@ -3,12 +3,12 @@ import { appName } from "~/config/data";
 import { AiOutlineGithub } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 import { signIn, signOut, useSession } from "next-auth/react";
 
 function HomeNav() {
-  const router = useRouter();
+  // const router = useRouter();
   const { data: sessionData } = useSession();
 
   return (

@@ -1,4 +1,4 @@
-import { Tag, Tooltip } from "antd";
+import { Tooltip } from "antd";
 import { appName, appVersion } from "~/config/data";
 import { CgFeed, CgProfile } from "react-icons/cg";
 import { FiSettings } from "react-icons/fi";

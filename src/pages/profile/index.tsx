@@ -1,7 +1,25 @@
-import { Image, Space, Tag } from "antd";
+import { Image, Tabs, Tag } from "antd";
 import { useSession } from "next-auth/react";
+import ActivityTab from "~/components/Profile/ActivityTab";
+import MyEventsTab from "~/components/Profile/MyEventsTab";
+import TransactionsTab from "~/components/Profile/TransactionsTab";
 import Layout from "~/components/common/Layout";
 import { userMock } from "~/config/data";
+
+const profileTabs = [
+  {
+    label: 'Activity',
+    children: <ActivityTab />,
+  },
+  {
+    label: 'Events',
+    children: <MyEventsTab />
+  },
+  {
+    label: 'Transactions',
+    children: <TransactionsTab />
+  }
+];
 
 function Profile() {
   const { data: sessionData } = useSession();
@@ -31,15 +49,20 @@ function Profile() {
           </div>
         </div>
 
-        <div className="cscrollbar flex-1 overflow-y-auto border border-white p-4">
-          Loremhic commodi dolore recusandae! Repellendus iusto harum molestiae
-          autem, blanditiis, eligendi dolores ipsam suscipit rem reiciendis,
-          quos neque quaerat aliquid ad. Suscipit laborum, animi ducimus iste
-          culpa eum ad na dignissimos? Fuga sunt nihil nam voluptatibus ad sit
-          illum dolore soluta quis temporibus, impedit quo culpa, quia expedita
-          adipisci id consequatur aspernatur reprehenderit dignissimos
-          voluptatpudiandae non alias debitis architecto quos suscipit, ipsa
-          enim dolor!
+        <div className="cscrollbar overflow-y-auto p-4">
+        <Tabs
+        tabPosition="top"
+        defaultActiveKey="1"
+        size="large"
+        className="!text-white"
+        items={profileTabs.map(({ label, children }) => {
+          return {
+            key: label,
+            label,
+            children,
+          };
+        })}
+      />
         </div>
       </div>
     </Layout>
