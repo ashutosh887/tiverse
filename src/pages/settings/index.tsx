@@ -10,7 +10,7 @@ function Settings() {
 
   useEffect(() => {
     if (sessionData?.user) {
-      void router.push("/dashboard");
+      void router.push("/");
     }
   }, [sessionData, router]);
   

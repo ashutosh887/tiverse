@@ -17,7 +17,6 @@ function Hero() {
     }
   }, [sessionData, router]);
 
-
   return (
     <div className="flex h-[85vh] w-[70%] flex-col items-center justify-center sm:w-[70%] md:w-[60%]">
       <h1 className="z-10 text-center text-4xl font-bold tracking-wider sm:text-5xl">
