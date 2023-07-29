@@ -1,18 +1,18 @@
 import { Button, Switch } from 'antd';
-import { signOut, useSession } from 'next-auth/react';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { signOut } from 'next-auth/react';
+// import { useRouter } from 'next/router';
+// import { useEffect } from 'react';
 import Layout from '~/components/common/Layout';
 
 function Settings() {
-  const router = useRouter();
-  const { data: sessionData } = useSession();
+  // const router = useRouter();
+  // const { data: sessionData } = useSession();
 
-  useEffect(() => {
-    if (sessionData?.user) {
-      void router.push("/");
-    }
-  }, [sessionData, router]);
+  // useEffect(() => {
+  //   if (sessionData?.user) {
+  //     void router.push("/");
+  //   }
+  // }, [sessionData, router]);
   
   return (
     <Layout page="Settings">

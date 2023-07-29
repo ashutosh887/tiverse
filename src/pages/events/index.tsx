@@ -74,7 +74,7 @@ function Events() {
         <div className="flex justify-end w-full p-4 space-x-2">
           <Button
             className="cpbutton"
-            onClick={() => void router.push('/event/new')}
+            // onClick={() => void router.push('/events/new')}
           >
             Create Event
           </Button>
