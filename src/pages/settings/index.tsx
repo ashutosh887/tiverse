@@ -1,7 +1,19 @@
 import { Button, Switch } from 'antd';
+import { signOut, useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import Layout from '~/components/common/Layout';
 
 function Settings() {
+  const router = useRouter();
+  const { data: sessionData } = useSession();
+
+  useEffect(() => {
+    if (sessionData?.user) {
+      void router.push("/dashboard");
+    }
+  }, [sessionData, router]);
+  
   return (
     <Layout page="Settings">
       <div className="m-4">
@@ -28,7 +40,7 @@ function Settings() {
         <div>
           <h1 className="text-xl my-4">Settings & Privacy</h1>
 
-          <Button className="cpbutton mr-2">Logout</Button>
+          <Button className="cpbutton mr-2" onClick={() => void signOut()}>Logout</Button>
           <Button ghost danger>
             Delete Account
           </Button>
