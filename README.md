@@ -1,42 +1,48 @@
 <p align="center">
-  <a href="https://revive-app.vercel.app">
+  <a href="https://tiverse.vercel.app">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png">
-      <img src="https://revive-app.vercel.app/logo.png" height="128" style="border-radius: 50%;">
+      <img src="https://tiverse.vercel.app/circle.png" height="128" style="border-radius: 50%;">
     </picture>
   </a>
 </p>
 
-# Revive
+# TiVerse
 
-Connecting you to your folks... with **TiVerse**
+Experience a new era of event and content management with **TiVerse**
 
-**Powered by:** React, WebRTC, Firebase, and a lot more!
+**Powered by:** [Vercel](https://vercel.com/) & [TiDB Cloud](https://tidbcloud.com/)
 ## Features
 
-- Schedule meetings
+- Integrated Ticketing System
 
-- Custom emails and notifications
+- Live Streaming and Virtual Events
 
-- Real time collaboration
+- Blog Monetization
 
 - Community Engagement
+
+- Event Gamification
+
+- QR Code Check-ins
 
 - Light/dark mode toggle
 ## Tech Stack
 
-**Client:** React, Elastic UI, Redux, etc.
+**Client:** React, Next.js, TailwindCSS, Ant Design, Daisy UI
 
-**Server:** Firebase
+**Server:** Node.js, tRPC
 
-**Database:** FireStore
+**Database:** TiDB (ORM: prisma)
 
 
 ## Demo
 
-- [Revive deployed version](https://revive-app.vercel.app/)
+- [TiVerse deployed version](https://tiverse.vercel.app/)
 
-- [Project story on DevPost](https://devpost.com/software/revive-awz2ns)
+- [Project story on DevPost](https://devpost.com/software/tiverse)
+
+- [Demo video on YouTube](https://youtu.be/wleUp3WFCB4)
 
 
 ## Environment Variables
@@ -46,23 +52,15 @@ To run this project, you will need to add the following environment variables to
 Check out `.env.example` for an example `.env`
 
 
-`VITE_FIREBASE_API_KEY`
+`DATABASE_URL`
 
-`VITE_FIREBASE_AUTH_DOMAIN`
+`NEXTAUTH_SECRET`
 
-`VITE_FIREBASE_PROJECT_ID`
+`NEXTAUTH_URL`
 
-`VITE_FIREBASE_STORAGE_BUCKET`
+`GITHUB_CLIENT_ID`
 
-`VITE_FIREBASE_MESSAGING_SENDER_ID`
-
-`VITE_FIREBASE_APP_ID`
-
-`VITE_FIREBASE_MEASUREMENT_ID`
-
-`VITE_ZEGOCLOUD_APP_ID`
-
-`VITE_ZEGOCLOUD_SERVER_SECRET`
+`GITHUB_CLIENT_SECRET`
 
 
 ## Author
