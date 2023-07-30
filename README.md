@@ -63,8 +63,10 @@ Check out `.env.example` for an example `.env`
 `GITHUB_CLIENT_SECRET`
 
 
-## Authors
+## Author
 
 - Ashutosh Jha 
     
-    [GitHub](https://www.github.com/ashutosh887)   [LinkedIn](https://www.linkedin.com/in/ashutosh887/)  [Twitter](https://twitter.com/ashutosh887_) 
+    * [GitHub](https://www.github.com/ashutosh887)
+    * [LinkedIn](https://www.linkedin.com/in/ashutosh887/)
+    * [Twitter](https://twitter.com/ashutosh887_) 
